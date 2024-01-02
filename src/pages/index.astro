@@ -3,7 +3,7 @@ import fetchAllProjects from "../helpers/fetchAllProjects";
 import { siteConfig } from "../../site.config";
 import RootLayout from "../layouts/RootLayout.astro";
 import Card from "../components/Card.astro";
-import Work from "../components/Work.astro";
+import Experience from "../components/Experience.astro";
 const myProjects = await fetchAllProjects();
 ---
 
@@ -35,7 +35,7 @@ const myProjects = await fetchAllProjects();
   <div class="grid grid-cols-1 gap-4">
     {
       siteConfig.experience.map((item) => (
-        <Work
+        <Experience
           company={item.company}
           timeframe={item.timeframe}
           description={item.description}
