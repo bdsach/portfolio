@@ -3,6 +3,7 @@ import fetchAllProjects from "../helpers/fetchAllProjects";
 import { siteConfig } from "../../site.config";
 import RootLayout from "../layouts/RootLayout.astro";
 import Card from "../components/Card.astro";
+import Work from "../components/Work.astro";
 const myProjects = await fetchAllProjects();
 ---
 
@@ -30,13 +31,16 @@ const myProjects = await fetchAllProjects();
     }
   </div>
 
-  <h2 class="head-section" id="projects">Works</h2>
-  <div class="border p-4 rounded-md">
-    <h3 class="text-lg font-light">PixelCraft</h3>
-    <h3 class="text-md font-light">(2020 - Present)</h3>
-    <p class="font-extralight mt-4">
-      A leading digital design agency based in San Francisco, specializing in
-      innovative UI/UX solutions for tech startups.
-    </p>
+  <h2 class="head-section" id="projects">Experience</h2>
+  <div class="grid grid-cols-1 gap-4">
+    {
+      siteConfig.experience.map((item) => (
+        <Work
+          company={item.company}
+          timeframe={item.timeframe}
+          description={item.description}
+        />
+      ))
+    }
   </div>
 </RootLayout>

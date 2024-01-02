@@ -20,5 +20,18 @@ export const siteConfig = {
       slug: "choose-your-hero-app",
     },
   ],
-  works: [],
+  experience: [
+    {
+      company: "Company Name",
+      timeframe: "2020 - Present",
+      description:
+        "Amet enim pariatur cillum in duis in aliquip reprehenderit duis irure enim. Commodo adipisicing adipisicing deserunt aliqua dolore occaecat.",
+    },
+    {
+      company: "Company Name",
+      timeframe: "2018 - 2020",
+      description:
+        "Labore ex eu proident deserunt ex ea fugiat nulla adipisicing culpa sint. Quis aliqua magna consequat deserunt aliqua elit nisi eu duis sint anim.",
+    },
+  ],
 };
