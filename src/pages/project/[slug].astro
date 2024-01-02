@@ -1,0 +1,29 @@
+---
+import { siteConfig } from "../../../site.config";
+import { fetchMarkdown } from "../../helpers/fetchMarkdown";
+import rawUrl from "../../helpers/getRawReadmeUrl";
+import RootLayout from "../../layouts/RootLayout.astro";
+
+export function getStaticPaths() {
+  return [
+    ...siteConfig.projects.map((route) => {
+      return {
+        params: { slug: route.slug },
+      };
+    }),
+  ];
+}
+
+const { slug } = Astro.params;
+const projectData = siteConfig.projects.find(
+  (project) => project.slug === slug
+);
+const content = await fetchMarkdown(rawUrl(String(projectData?.repoUrl)));
+---
+
+<RootLayout>
+  <a href="/#projects" class="">
+    <button class="my-10">Back</button>
+  </a>
+  <article class="content" set:html={content} />
+</RootLayout>

@@ -1,0 +1,24 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { fade } from 'astro:transitions';
+import "../styles/global.css";
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+---
+
+<html lang="en" transition:animate="none">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <article class="mx-auto max-w-[840px]" transition:animate={fade({ duration: '0.4s' })}>
+      <slot />
+    </article>
+  <Footer/>
+  </body>
+</html>

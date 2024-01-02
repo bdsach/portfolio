@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+  body {
+    /* @apply bg-[#141414] p-10; */
+  }
+  button {
+    @apply px-5 py-2 bg-[#212121] text-gray-100 rounded font-light border-2 border-transparent hover:bg-white hover:text-black hover:border-2 border-black transition-all;
+  }
+
+  button.primary {
+    @apply bg-blue-500;
+  }
+
+  .head-section {
+    @apply text-3xl font-semibold mt-20 mb-6;
+  }
+  .content {
+    @apply prose max-w-[840px] prose-p:font-extralight prose-li:font-extralight prose-li:marker:font-extralight prose-li:marker:text-gray-700;
+  }
+}

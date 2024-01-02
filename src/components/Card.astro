@@ -1,0 +1,21 @@
+---
+const { title, description, image, slug } = Astro.props;
+---
+
+<div class="grid grid-cols-9 gap-5">
+  <div class="col-span-4">
+    <img
+      class="rounded-[10px] my-0 border-gray-200 border"
+      src={image || "https://placehold.co/600x400" }
+    />
+  </div>
+  <div class="col-span-5 flex flex-col items-start justify-center gap-5">
+    <h3 class="text-2xl my-0 font-medium">{title || "title"}</h3>
+    <div class="font-thin line-clamp-2">
+      {description || "description"}
+    </div>
+    <a href={`/project/${slug}`}>
+      <button>View</button>
+    </a>
+  </div>
+</div>
