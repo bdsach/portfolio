@@ -4,7 +4,7 @@ export const siteConfig = {
   projects: [
     {
       repoUrl: "https://github.com/bdsach/Quizzify-App",
-      slug: "Quizzify",
+      slug: "quizzify",
       published: true,
     },
     {
