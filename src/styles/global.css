@@ -20,6 +20,6 @@
     @apply text-3xl font-semibold mt-20 mb-6;
   }
   .content {
-    @apply prose max-w-[840px] prose-p:font-extralight prose-li:font-extralight prose-li:marker:font-extralight prose-li:marker:text-gray-700;
+    @apply min-h-screen prose max-w-[840px] prose-p:font-extralight prose-li:font-extralight prose-li:marker:font-extralight prose-li:marker:text-gray-700;
   }
 }
