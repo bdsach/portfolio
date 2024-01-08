@@ -3,6 +3,10 @@ export const siteConfig = {
   description: "",
   projects: [
     {
+      repoUrl: "https://github.com/bdsach/Quizzify-App",
+      slug: "Quizzify",
+    },
+    {
       repoUrl: "https://github.com/bdsach/Thai-Dictionary-App",
       slug: "thai-dictionary-app",
     },
