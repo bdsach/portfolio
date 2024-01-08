@@ -1,9 +1,10 @@
 ---
-import fetchAllProjects from "../helpers/fetchAllProjects";
 import { siteConfig } from "../../site.config";
-import RootLayout from "../layouts/RootLayout.astro";
 import Card from "../components/Card.astro";
-import Experience from "../components/Experience.astro";
+import RootLayout from "../layouts/RootLayout.astro";
+import fetchAllProjects from "../helpers/fetchAllProjects";
+// import Experience from "../sections/Experience.astro";
+
 const myProjects = await fetchAllProjects();
 ---
 
@@ -12,9 +13,9 @@ const myProjects = await fetchAllProjects();
     src="https://avatars.githubusercontent.com/u/54714492"
     class="h-20 w-20 rounded-full saturate-50 hover:saturate-100 transition duration-300"
   />
-  <h1 class="text-4xl font-semibold my-6">Hey, I'm Bandit</h1>
-  <p class="font-light">
-    A digital alchemist weaving pixels and code into functional art.
+  <h1 class="text-4xl font-semibold my-6">Hello, I'm Bandit</h1>
+  <p class="font-extralight text-xl">
+    I'm a self-taught iOS Developer. Explore my projects to see the exciting journey of what I've learned and built.
   </p>
 
   <h2 class="head-section" id="projects">Projects</h2>
@@ -31,16 +32,5 @@ const myProjects = await fetchAllProjects();
     }
   </div>
 
-  <h2 class="head-section" id="projects">Experience</h2>
-  <div class="grid grid-cols-1 gap-4">
-    {
-      siteConfig.experience.map((item) => (
-        <Experience
-          company={item.company}
-          timeframe={item.timeframe}
-          description={item.description}
-        />
-      ))
-    }
-  </div>
+  <!-- <Experience/> -->
 </RootLayout>
