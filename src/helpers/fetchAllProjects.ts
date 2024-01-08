@@ -9,7 +9,9 @@ import rawUrl from "./getRawReadmeUrl";
  * Fetches all projects from the site configuration.
  */
 async function fetchAllProjects() {
-  const promises = siteConfig.projects.map((project) => {
+  const promises = siteConfig.projects
+  .filter((project) => project.published)
+  .map((project) => {
     const url = rawUrl(project.repoUrl);
     const content = fetchMarkdown(url);
     const projectName = fetchProjectName(url);
