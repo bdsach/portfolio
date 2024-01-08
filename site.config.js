@@ -5,7 +5,7 @@ export const siteConfig = {
     {
       repoUrl: "https://github.com/bdsach/Quizzify-App",
       slug: "Quizzify",
-      published: false,
+      published: true,
     },
     {
       repoUrl: "https://github.com/bdsach/Thai-Dictionary-App",
