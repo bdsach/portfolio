@@ -1,5 +1,6 @@
 ---
 import Container from "../components/Container.astro";
+import { siteConfig } from "../../site.config";
 ---
 
 <Container>
@@ -9,8 +10,5 @@ import Container from "../components/Container.astro";
     alt="Bandit Avatar"
   />
   <h1 class="my-6 text-4xl font-semibold">Hello, I'm Bandit</h1>
-  <p class="text-xl font-extralight leading-relaxed">
-    I'm a self-taught iOS Developer. Explore my projects to see the exciting
-    journey of what I've learned and built.
-  </p>
+  <p class="text-xl font-extralight leading-relaxed">{siteConfig.description}</p>
 </Container>
