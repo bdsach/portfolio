@@ -1,6 +1,6 @@
 export const siteConfig = {
   title: "Portfolio - Bandit Silachai",
-  description: "",
+  description: "Personal portfolio of Bandit Silachai",
   projects: [
     {
       repoUrl: "https://github.com/bdsach/Quizzify-App",
