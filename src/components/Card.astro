@@ -3,12 +3,13 @@ const { title, description, image, slug } = Astro.props;
 ---
 
 <div class="grid grid-cols-1 gap-0 md:grid-cols-9 md:gap-5">
-  <div class="col-span-1 md:col-span-4">
+  <figure class="col-span-1 md:col-span-4">
     <img
       class="my-0 rounded-[10px] border border-gray-200"
       src={image || "https://placehold.co/600x400"}
+      alt={slug}
     />
-  </div>
+  </figure>
   <div
     class="col-span-1 mt-3 flex flex-col items-start justify-center gap-3 md:col-span-5 md:mt-0 md:gap-5"
   >
