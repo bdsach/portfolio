@@ -1,38 +1,18 @@
 ---
 import { siteConfig } from "../../site.config";
-import Card from "../components/Card.astro";
 import RootLayout from "../layouts/RootLayout.astro";
 import fetchAllProjects from "../helpers/fetchAllProjects";
 import Contact from "../sections/contact.astro";
+import Hero from "../sections/hero.astro";
+import Project from "../sections/project.astro";
 // import Experience from "../sections/Experience.astro";
 
 const myProjects = await fetchAllProjects();
 ---
 
 <RootLayout title={siteConfig.title}>
-  <img
-    src="https://avatars.githubusercontent.com/u/54714492"
-    class="h-20 w-20 rounded-full saturate-50 hover:saturate-100 transition duration-300 mt-10"
-  />
-  <h1 class="text-4xl font-semibold my-6">Hello, I'm Bandit</h1>
-  <p class="font-extralight text-xl leading-relaxed">
-    I'm a self-taught iOS Developer. Explore my projects to see the exciting journey of what I've learned and built.
-  </p>
-
-  <h2 class="head-section" id="projects">Projects</h2>
-  <div class="grid grid-cols-1 gap-10">
-    {
-      myProjects.map((project) => (
-        <Card
-          title={project.projectName}
-          description={project.description}
-          slug={project.slug}
-          image={project.cover}
-        />
-      ))
-    }
-  </div>
-
+  <Hero />
+  <Project />
   <!-- <Experience/> -->
   <Contact />
 </RootLayout>

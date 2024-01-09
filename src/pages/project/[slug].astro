@@ -5,6 +5,7 @@ import { fetchProjectName } from "../../helpers/fetchProjectName";
 import { fetchDescription } from "../../helpers/fetchDescription";
 import rawUrl from "../../helpers/getRawReadmeUrl";
 import RootLayout from "../../layouts/RootLayout.astro";
+import Container from "../../components/Container.astro";
 
 export function getStaticPaths() {
   return [
@@ -27,8 +28,10 @@ const content = await fetchMarkdown(rawUrl(String(projectData?.repoUrl)));
 ---
 
 <RootLayout title={projectName} description={description}>
+  <Container>
   <a href="/#projects" class="">
     <button class="my-10">Back</button>
   </a>
   <article class="content" set:html={content} />
+</Container>
 </RootLayout>

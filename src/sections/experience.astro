@@ -4,14 +4,14 @@ import { siteConfig } from "../../site.config";
 ---
 
 <h2 class="head-section" id="projects">Experience</h2>
-  <div class="grid grid-cols-1 gap-4">
-    {
-      siteConfig.experience.map((item) => (
-        <Card
-          company={item.company}
-          timeframe={item.timeframe}
-          description={item.description}
-        />
-      ))
-    }
-  </div>
+<div class="grid grid-cols-1 gap-4">
+  {
+    siteConfig.experience.map((item) => (
+      <Card
+        company={item.company}
+        timeframe={item.timeframe}
+        description={item.description}
+      />
+    ))
+  }
+</div>

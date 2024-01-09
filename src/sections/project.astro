@@ -1,0 +1,22 @@
+---
+import Card from "../components/Card.astro";
+import Container from "../components/Container.astro";
+import fetchAllProjects from "../helpers/fetchAllProjects";
+const myProjects = await fetchAllProjects();
+---
+
+<Container>
+  <h2 class="head-section" id="projects">Projects</h2>
+  <div class="grid grid-cols-1 gap-10">
+    {
+      myProjects.map((project) => (
+        <Card
+          title={project.projectName}
+          description={project.description}
+          slug={project.slug}
+          image={project.cover}
+        />
+      ))
+    }
+  </div>
+</Container>
