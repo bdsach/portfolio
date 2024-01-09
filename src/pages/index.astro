@@ -3,6 +3,7 @@ import { siteConfig } from "../../site.config";
 import Card from "../components/Card.astro";
 import RootLayout from "../layouts/RootLayout.astro";
 import fetchAllProjects from "../helpers/fetchAllProjects";
+import Contact from "../sections/contact.astro";
 // import Experience from "../sections/Experience.astro";
 
 const myProjects = await fetchAllProjects();
@@ -14,7 +15,7 @@ const myProjects = await fetchAllProjects();
     class="h-20 w-20 rounded-full saturate-50 hover:saturate-100 transition duration-300 mt-10"
   />
   <h1 class="text-4xl font-semibold my-6">Hello, I'm Bandit</h1>
-  <p class="font-extralight text-xl">
+  <p class="font-extralight text-xl leading-relaxed">
     I'm a self-taught iOS Developer. Explore my projects to see the exciting journey of what I've learned and built.
   </p>
 
@@ -33,4 +34,5 @@ const myProjects = await fetchAllProjects();
   </div>
 
   <!-- <Experience/> -->
+  <Contact />
 </RootLayout>
