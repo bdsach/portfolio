@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: "Portfolio",
+  title: "Portfolio - Bandit Silachai",
   description: "",
   projects: [
     {
