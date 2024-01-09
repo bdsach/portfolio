@@ -1,16 +1,12 @@
 ---
-import { siteConfig } from "../../site.config";
 import RootLayout from "../layouts/RootLayout.astro";
-import fetchAllProjects from "../helpers/fetchAllProjects";
 import Contact from "../sections/contact.astro";
 import Hero from "../sections/hero.astro";
 import Project from "../sections/project.astro";
 // import Experience from "../sections/Experience.astro";
-
-const myProjects = await fetchAllProjects();
 ---
 
-<RootLayout title={siteConfig.title}>
+<RootLayout>
   <Hero />
   <Project />
   <!-- <Experience/> -->
