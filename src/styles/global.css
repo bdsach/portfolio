@@ -2,27 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
   body {
-    /* @apply bg-[#141414] p-10; */
+    @apply bg-white dark:bg-[#141414];
   }
   button {
-    @apply px-5 py-2 bg-[#212121] text-gray-100 rounded font-light border-2 border-transparent hover:bg-white hover:text-black hover:border-2 border-black transition-all;
+    @apply rounded border-2 border-black border-transparent bg-[#212121] px-5 py-2 font-light text-gray-100 transition-all hover:border-2 hover:bg-white hover:text-black dark:border-transparent;
   }
 
   button.primary {
     @apply bg-blue-500;
   }
   .social-icon {
-    @apply p-0 bg-transparent text-[#212121] border-2 hover:bg-[#212121] hover:text-white border-[#212121] transition-all rounded-full w-10 h-10 flex justify-center items-center;
+    @apply flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#212121] bg-transparent p-0 text-[#212121] transition-all hover:bg-[#212121] hover:text-white
+    dark:hover:bg-white dark:hover:text-[#212121];
   }
 
   .head-section {
-    @apply text-3xl font-semibold mt-20 mb-6;
+    @apply mb-6 mt-20 text-3xl font-semibold dark:text-gray-100;
   }
   .content {
-    @apply min-h-screen prose max-w-[840px] prose-p:font-extralight prose-li:font-extralight prose-li:marker:font-extralight prose-li:marker:text-gray-700;
+    @apply prose min-h-screen max-w-[840px] prose-p:font-extralight prose-li:font-extralight prose-li:marker:font-extralight prose-li:marker:text-gray-700 
+    dark:prose-h1:text-gray-100 dark:prose-h2:text-gray-200 dark:prose-p:text-gray-300
+    dark:prose-a:text-gray-300 dark:prose-li:text-gray-300 dark:prose-li:marker:text-gray-300
+    dark:prose-th:text-gray-300;
   }
 }

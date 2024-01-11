@@ -13,8 +13,10 @@ const { title, description, image, slug } = Astro.props;
   <div
     class="col-span-1 mt-3 flex flex-col items-start justify-center gap-3 md:col-span-5 md:mt-0 md:gap-5"
   >
-    <h3 class="my-0 text-2xl font-medium">{title || "title"}</h3>
-    <div class="line-clamp-2 font-thin">
+    <h3 class="my-0 text-2xl font-medium dark:text-gray-100">
+      {title || "title"}
+    </h3>
+    <div class="line-clamp-2 font-thin dark:text-gray-200">
       {description || "description"}
     </div>
     <a href={`/project/${slug}`}>
