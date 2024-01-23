@@ -1,5 +1,3 @@
-import { marked } from "marked";
-
 /**
  * Fetches the project name from the given URL.
  *
