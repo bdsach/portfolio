@@ -22,14 +22,17 @@ export const siteConfig = {
       slug: "food-menu-app",
       published: true,
     },
-    {
-      repoUrl: "https://github.com/bdsach/FireGate",
-      slug: "fire-gate-app",
-      published: true,
-    },
+    
     {
       repoUrl: "https://github.com/bdsach/Choose-Your-Hero",
       slug: "choose-your-hero-app",
+      published: true,
+    },
+  ],
+  playgrounds: [
+    {
+      repoUrl: "https://github.com/bdsach/FireGate",
+      slug: "fire-gate-app",
       published: true,
     },
   ],
