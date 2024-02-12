@@ -6,7 +6,7 @@ const myPlayground = await fetchAllPlayground();
 
 <Container>
   <h2 class="head-section" id="projects">Playground</h2>
-  <div class="grid grid-cols-1 gap-10">
+  <div class="grid grid-cols-1 gap-3">
     {
       myPlayground.map((playground) => (
         <a href={playground.repoUrl} target="_blank">
