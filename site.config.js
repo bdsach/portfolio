@@ -35,6 +35,11 @@ export const siteConfig = {
       slug: "fire-gate-app",
       published: true,
     },
+    {
+      repoUrl: "https://github.com/bdsach/Pinterest-Clone",
+      slug: "pinterest-clone",
+      published: true,
+    }
   ],
   experience: [
     {
