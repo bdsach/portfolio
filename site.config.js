@@ -1,6 +1,7 @@
 export const siteConfig = {
   title: "Portfolio - Bandit Silachai",
-  description: "I'm a self-taught iOS Developer. Explore my projects to see the exciting journey of what I've learned and built.",
+  description:
+    "I'm a self-taught iOS Developer. Explore my projects to see the exciting journey of what I've learned and built.",
   projects: [
     {
       repoUrl: "https://github.com/bdsach/Quizzify-App",
@@ -22,7 +23,6 @@ export const siteConfig = {
       slug: "food-menu-app",
       published: true,
     },
-    
     {
       repoUrl: "https://github.com/bdsach/Choose-Your-Hero",
       slug: "choose-your-hero-app",
@@ -36,10 +36,15 @@ export const siteConfig = {
       published: true,
     },
     {
+      repoUrl: "https://github.com/bdsach/CustomTabView",
+      slug: "custom-tab-view",
+      published: true,
+    },
+    {
       repoUrl: "https://github.com/bdsach/Pinterest-Clone",
       slug: "pinterest-clone",
       published: true,
-    }
+    },
   ],
   experience: [
     {
