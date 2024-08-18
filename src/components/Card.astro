@@ -1,5 +1,6 @@
 ---
-const { title, description, image, slug } = Astro.props;
+const { title, description, image, slug, topics } = Astro.props;
+const getTopics = await topics;
 ---
 
 <div class="grid grid-cols-1 gap-0 md:grid-cols-9 md:gap-5">
@@ -16,6 +17,15 @@ const { title, description, image, slug } = Astro.props;
     <h3 class="my-0 text-2xl font-medium dark:text-gray-100">
       {title || "title"}
     </h3>
+    <div class="flex gap-1">
+      {
+        getTopics.map((item: string) => (
+          <p class="bg-cyan-100 p-0.5 font-mono font-semibold text-[10px] uppercase text-cyan-700 dark:text-white dark:bg-cyan-700 rounded">
+            {item}
+          </p>
+        ))
+      }
+    </div>
     <div class="line-clamp-2 font-thin dark:text-gray-200">
       {description || "description"}
     </div>
