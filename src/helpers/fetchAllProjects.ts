@@ -2,7 +2,7 @@ import { siteConfig } from "../../site.config";
 import { fetchMarkdown } from "./fetchMarkdown";
 import { fetchProjectName } from "./fetchProjectName";
 import { fetchDescription } from "./fetchDescription";
-import { fetchTopic } from "./fetchTopic";
+import { fetchDetail } from "./fetchDetail";
 import getCover from "./getCover";
 import rawUrl from "./getRawReadmeUrl";
 
@@ -17,7 +17,7 @@ async function fetchAllProjects() {
     const content = fetchMarkdown(url);
     const projectName = fetchProjectName(url);
     const description = fetchDescription(url);
-    const topics = fetchTopic(project.repoUrl)
+    const detail = fetchDetail(project.repoUrl)
     const cover = getCover(project.repoUrl);
 
     return {
@@ -26,7 +26,7 @@ async function fetchAllProjects() {
       content,
       slug: project.slug,
       cover,
-      topics
+      detail
     };
   });
 

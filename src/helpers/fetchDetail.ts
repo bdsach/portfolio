@@ -1,3 +1,5 @@
+import type { GitHubRepo } from "../@types/GitHubRepo";
+
 /**
  * Transforms a GitHub repository URL into a GitHub API URL.
  *
@@ -24,7 +26,7 @@ function transformUrl(url: string): string {
  * @return {Promise<string>} A promise that resolves to the fetched topics.
  * @throws {Error} If the fetch operation fails or the URL is invalid.
  */
-export const fetchTopic = async (url: string): Promise<string> => {
+export const fetchDetail = async (url: string): Promise<GitHubRepo> => {
 
   try {
     const response = await fetch(transformUrl(url), {
@@ -40,7 +42,7 @@ export const fetchTopic = async (url: string): Promise<string> => {
 
     const data = await response.json();
 
-    return data.topics;
+    return data
   } catch (error) {
     console.error(error);
     throw error;
