@@ -12,7 +12,7 @@
     "enable-dev-toolbar": "astro preferences enable devToolbar"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.2",
+    "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.14.2",
     "lenis": "^1.1.9",
