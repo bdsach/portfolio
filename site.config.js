@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: "Portfolio - Bandit Silachai",
   description:
-    "I'm a self-taught iOS Developer. Explore my projects to see the exciting journey of what I've learned and built.",
+    "I’m a Frontend Developer with experience in web development using Next.js and Angular. Besides building websites, I also create iOS apps using native tools like UIKit and SwiftUI.",
   projects: [
     {
       repoUrl: "https://github.com/bdsach/Quizzify-App",
@@ -26,6 +26,11 @@ export const siteConfig = {
     {
       repoUrl: "https://github.com/bdsach/Choose-Your-Hero",
       slug: "choose-your-hero-app",
+      published: true,
+    },
+    {
+      repoUrl: "https://github.com/bdsach/my-grade",
+      slug: "my-grade",
       published: true,
     },
   ],
