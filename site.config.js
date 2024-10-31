@@ -31,7 +31,7 @@ export const siteConfig = {
     {
       repoUrl: "https://github.com/bdsach/my-grade",
       slug: "my-grade",
-      published: true,
+      published: false,
     },
   ],
   playgrounds: [
