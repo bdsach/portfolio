@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 import { fade } from "astro:transitions";
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
@@ -15,7 +15,7 @@ import { siteConfig } from "../../site.config";
     <meta name="generator" content={Astro.generator} />
     <title>{title || siteConfig.title}</title>
     <meta name="description" content={description || siteConfig.description} />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <div transition:animate={fade({ duration: "0.4s" })}>

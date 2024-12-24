@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: "Portfolio - Bandit Silachai",
   description:
-    "I’m a Frontend Developer with experience in web development using Next.js and Angular. Besides building websites, I also create iOS apps using native tools like UIKit and SwiftUI.",
+    "I’m a Frontend Developer with experience in web development using Next.js. Besides building websites, I also create iOS apps using native tools like UIKit and SwiftUI.",
   projects: [
     {
       repoUrl: "https://github.com/bdsach/Quizzify-App",
